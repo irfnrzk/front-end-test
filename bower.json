@@ -1,0 +1,22 @@
+{
+  "name": "lion-test-basic",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "DESKTOP-M08MA28\\irfnrzk <irfan.abrazak@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/irfnrzk/front-end-test",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "isotope-layout": "isotope#^3.0.6",
+    "featherlight": "^1.7.13"
+  }
+}

@@ -23,7 +23,7 @@ gulp.task('browser-sync',['php'], function() {
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-  return gulp.src("assets/sass/*.scss")
+  return gulp.src("assets/stylesheets/*.scss")
       .pipe(sass())
       .pipe(gulp.dest("dist/css"))
       .pipe(browserSync.stream());
@@ -39,6 +39,6 @@ gulp.task('minify-css', () => {
 });
 
 gulp.task('default', ['browser-sync','sass','minify-css'], function () {
-  gulp.watch("assets/sass/*.scss", ['sass']);
+  gulp.watch("assets/stylesheets/*.scss", ['sass']);
     gulp.watch(['*.php'], [reload]);
 });

@@ -1,0 +1,13 @@
+$lion-red: #ff2927;
+$orange: #f68b20;
+
+.center-absolute{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.trans{
+  transition: 0,5
+}
