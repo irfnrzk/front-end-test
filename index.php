@@ -7,6 +7,7 @@
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
   crossorigin="anonymous"></script>
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <link rel="stylesheet" href="dist/css/style.css">
   
 </head>
 <body>
@@ -25,15 +26,16 @@
     $values = array_keys($result);
   ?>
 
+
   <div class="button-group filter-button-group">
     <?php foreach($values as $value) : ?>  
-      <button data-filter=".<?= $store->state; ?>"><?= $value; ?></button>
+      <button data-filter=".<?= $value; ?>"><?= $value; ?></button>
     <?php endforeach; ?>
   </div>
     
   <ul class="grid">  
     <?php foreach ($stores as $store) : ?>
-      <?php if ($store->status == true) { ?>
+      <?php if (!$store->status == false) { ?>
         <li class="<?= $store->state; ?>"><?= $store->state; ?></li>
       <?php } ?>    
     <?php endforeach; ?>

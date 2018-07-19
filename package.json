@@ -1,0 +1,29 @@
+{
+  "name": "lion-test-basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irfnrzk/front-end-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/irfnrzk/front-end-test/issues"
+  },
+  "homepage": "https://github.com/irfnrzk/front-end-test#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-rename": "^1.3.0",
+    "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {}
+}
