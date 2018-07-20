@@ -1,5 +1,21 @@
+@import "../../bower_components/bourbon/core/bourbon";
+
 $lion-red: #ff2927;
 $orange: #f68b20;
+$light-grey: #f3f3f3;
+$border-grey: #dbdbdb;
+$dark-grey: #404040;
+$title-grey: #696767;
+$text-grey: #333333;
+
+@include font-face(
+  "FontAwesome",
+  "../../bower_components/font-awesome/fonts/fontawesome-webfont",
+  ("woff2", "woff")
+) {
+  font-style: normal;
+  font-weight: 400;
+}
 
 .center-absolute{
   position: absolute;
@@ -11,3 +27,52 @@ $orange: #f68b20;
 .trans{
   transition: 0,5
 }
+
+.text{
+  &-large{
+    font-size: 16px;
+  }
+
+  &-small{
+    font-size: 12px;
+  }
+
+  &-grey{
+    color: $text-grey;
+  }
+
+  &-bold{
+    font-weight: bold;
+  }
+
+  &-link{
+    transition: all 0.5s ease;
+    &:hover{
+      color: $lion-red;
+    }
+  }
+}
+
+.title{
+  &-section{
+    display: block;
+    border-bottom: 1px solid $lion-red;
+    color: $title-grey;
+    padding-bottom: 10px;    
+  }
+}
+
+.lightbox{
+  display: none;
+}
+
+.btn-lightbox{
+  background: $orange;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 5px;
+  &:hover{
+    color: black;
+  }
+}
+

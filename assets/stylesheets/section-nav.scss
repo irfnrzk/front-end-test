@@ -14,11 +14,19 @@ a{
 }
 
 main{
-  margin-top: 150px;
+  margin-top: 130px;
+  @media(min-width: 768px){
+    margin-top: 170px;
+  }
+}
+
+section{
+  margin-bottom: 30px;
 }
 
 // Navbar Section
 .navbar{
+  z-index: 2;
   .container{
     position: relative;
   }
@@ -32,8 +40,8 @@ main{
     border-right: 0;
     border-bottom: 0;
     width: 100%;
-    position: fixed;
-    top: 0;
+    // position: fixed;
+    // top: 0;
     left: 50%;
     transform: translate(-50%);
     z-index: 1;
@@ -100,18 +108,95 @@ main{
 
 
 // Main Section
-// Instruction (Lightbox)
+// Photos
 
-.btn-lightbox{
-  background: $orange;
-  color: #fff;
-  padding: 5px 20px;
+.section-container{
+  background: $light-grey;
+  border: 1px solid $border-grey;
   border-radius: 5px;
-  &:hover{
-    color: black;
+}
+
+.carousel{
+  width: 90%;
+  margin:0px auto;
+
+  &-container{
+    background: $light-grey;
+    @media(min-width: 1025px){
+      width: calc(100% - 15px);
+      padding-bottom: 38%;
+      height: 0;
+    }
+    margin: 10px auto;
   }
 }
 
-.lightbox{
-  display: none;
+.slick{
+  &-slide{
+    margin:10px;
+
+    & img{
+      width:100%;
+    }
+  }  
+
+  &-next,
+  &-prev{
+    right: -25px;
+    height: calc(100% - 20px);
+    background: $dark-grey;
+    transition: all 0.5s ease;
+    &:hover{
+      background: $light-grey;
+    }
+    &:focus{
+      background: $dark-grey;
+    }
+    &:before{
+      font-family: 'FontAwesome';
+      content: '\f0d9';
+      color: $light-grey;
+    }
+  }
+  &-next{
+    &:before{
+      content: '\f0da';
+    }
+  }
+}  
+
+//blog
+.box{
+  &-container{
+    transition: all 0.5s ease;
+    box-shadow: 0 0 13px $border-grey;
+    margin: 15px 0;
+    @media(min-width: 768px){
+      box-shadow: 0 0 0;
+      margin: 0;
+    }
+    &:hover{
+      box-shadow: 0 0 13px $border-grey;
+    }
+  }
+}
+
+.image-container{
+  width: 100%;
+  height: 0;
+  padding-bottom: 33.3%;
+  transition: all 0.5s ease;
+  display: inline-block;
+  
+  &:hover{
+    opacity: .5;
+  }
+  
+  img{
+    width: 100%;
+  }
+}
+
+.text-container{
+  padding: 10px;
 }

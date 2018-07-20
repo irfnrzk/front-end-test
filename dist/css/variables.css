@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "FontAwesome";
+  src: url("../../bower_components/font-awesome/fonts/fontawesome-webfont.woff2") format("woff2"), url("../../bower_components/font-awesome/fonts/fontawesome-webfont.woff") format("woff");
+  font-style: normal;
+  font-weight: 400; }
+
 .center-absolute {
   position: absolute;
   top: 50%;
@@ -6,3 +12,37 @@
 
 .trans {
   transition: 0,5; }
+
+.text-large {
+  font-size: 16px; }
+
+.text-small {
+  font-size: 12px; }
+
+.text-grey {
+  color: #333333; }
+
+.text-bold {
+  font-weight: bold; }
+
+.text-link {
+  transition: all 0.5s ease; }
+  .text-link:hover {
+    color: #ff2927; }
+
+.title-section {
+  display: block;
+  border-bottom: 1px solid #ff2927;
+  color: #696767;
+  padding-bottom: 10px; }
+
+.lightbox {
+  display: none; }
+
+.btn-lightbox {
+  background: #f68b20;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 5px; }
+  .btn-lightbox:hover {
+    color: black; }

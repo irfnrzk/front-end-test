@@ -20,6 +20,7 @@
   "homepage": "https://github.com/irfnrzk/front-end-test#readme",
   "devDependencies": {
     "browser-sync": "^2.24.5",
+    "font-face-mixin": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.4",
     "gulp-connect-php": "^1.0.3",

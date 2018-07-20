@@ -26,6 +26,61 @@ $(document).on('click','.navbar-collapse.in',function(e) {
   }
 });
 
+
+
+
+
 $(document).ready(function(){
-  
+
+  // Scroll to section
+  $('.nav-link').click(function(){    
+    var divId = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(divId).offset().top - 145
+    }, 100);
+  });
+
+  //Slick-carousel config
+  $('.carousel-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.carousel'
+  });
+
+  $('.carousel').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.carousel-for',
+    centerMode: true,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        }
+      }
+    ]
+  });
+
+
 });
