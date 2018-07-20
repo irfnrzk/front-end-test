@@ -165,8 +165,6 @@
       </div>
     </main>
       
-      
-      <script src="/bower_components/jquery-smooth-scrolling/jquery.smoothscroll.min.js"></script>
       <script src="/bower_components/jquery-migrate/jquery-migrate.min.js"></script>
       <script src="/bower_components/featherlight/release/featherlight.min.js"></script>
       <script src="/bower_components/slick-carousel/slick/slick.min.js"></script>

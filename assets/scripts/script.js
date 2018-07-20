@@ -26,10 +26,6 @@ $(document).on('click','.navbar-collapse.in',function(e) {
   }
 });
 
-
-
-
-
 $(document).ready(function(){
 
   // Scroll to section
@@ -37,7 +33,7 @@ $(document).ready(function(){
     var divId = $(this).attr('href');
     $('html, body').animate({
       scrollTop: $(divId).offset().top - 145
-    }, 100);
+    }, 500);
   });
 
   //Slick-carousel config
@@ -81,6 +77,5 @@ $(document).ready(function(){
       }
     ]
   });
-
 
 });
