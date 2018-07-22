@@ -14,9 +14,16 @@
     <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css">
     <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick-theme.css">
     <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" /> -->
+    
     
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>  
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script> -->
+    
 
   </head>
   <body>
@@ -129,28 +136,31 @@
             </div>
           </div>
         </section>
-        
-        
-        
-        
-        
-        <?php
-          // Read JSON file
-          $json = file_get_contents('stores.json');
-          // Decode JSON
-          $stores = json_decode($json);
-          ?>
 
-        <?php foreach($stores as $store){  
-          // Store unique "State" filters
-          $result[$store->state] = null;
-        } 
-        $values = array_keys($result);
+        <section id="form-submission">
+
+          <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy" style="position: relative;">
+            <input class="form-control" type="text" readonly />
+            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+          </div>
+
+        </section>
+
+        <?php
+          // Read and decode json
+          $json = file_get_contents('stores.json');
+          $stores = json_decode($json);
+          
+          // Remove repeated "state" for button filter 
+          foreach($stores as $store){  
+            $result[$store->state] = null;
+          }
+          $values = array_keys($result); 
         ?>
 
         <div class="button-group filter-button-group">
-          <?php foreach($values as $value) : ?>  
-          <button data-filter=".<?= $value; ?>"><?= $value; ?></button>
+          <?php foreach($values as $value) : ?>
+            <button data-filter=".<?= $value; ?>"><?= $value; ?></button>
           <?php endforeach; ?>
         </div>
         

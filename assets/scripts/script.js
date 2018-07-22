@@ -78,4 +78,18 @@ $(document).ready(function(){
     ]
   });
 
+
+
+  $('form').submit(function(e){
+    e.preventDefault();
+    var name = $()
+  });
+
+});
+
+$(function () {
+  $("#datepicker").datepicker({ 
+        autoclose: true, 
+        todayHighlight: true
+  }).datepicker('update', new Date());
 });
