@@ -1,12 +1,13 @@
 // init Isotope
-var $grid = $('.grid').isotope();
+var $grid = $('.grid');
+$grid.isotope();
 
 // filter items on button click
 $filters = $('.filter-button-group').on('click', 'button', function(){
-
+  
   var filterValue = $(this).attr('data-filter');
   var filterValue;
-
+  
   if ($(this).is('.is-checked')){
     // uncheck
     filterValue = '*';
@@ -14,9 +15,17 @@ $filters = $('.filter-button-group').on('click', 'button', function(){
     filterValue = $(this).attr('data-filter');
     $filters.find('.is-checked').removeClass('is-checked');
   }
-
+  
   $(this).toggleClass('is-checked');    
   $grid.isotope({ filter: filterValue });
+
+  if ( !$grid.data('isotope').filteredItems.length ) {
+    console.log('no');
+    $('.message-div').fadeIn('slow');
+  } else {
+    $('.message-div').fadeOut('fast');
+  };
+
 });
 
 // collapse mobile navbar when click

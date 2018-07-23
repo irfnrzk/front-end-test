@@ -171,6 +171,10 @@
           <?php } ?>    
           <?php endforeach; ?>
         </ul>
+
+        <div class="message-div">
+          <span>Sorry, the place you're looking for is currently not available. Check again soon!</span>
+        </div>
           
       </div>
     </main>
