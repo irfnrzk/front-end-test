@@ -87,6 +87,22 @@ $(document).ready(function(){
     ]
   });
 
+  $('form').submit(function(e){
+    event.preventDefault();
+    var email = $('#form-email').val();
+    var date = $("#form-date").val();
+    var country = $('#countryselect').val();
+    var submit = $('#form-submit').val();
+
+    $('.form-message').load('mail.php', {
+      email: email,
+      submit: submit,
+      date: date,
+      country: country
+    });
+
+  });
+
 
 
   // $('form').submit(function(e){
@@ -94,7 +110,33 @@ $(document).ready(function(){
   //   var name = $()
   // });
 
+  // $('#submit').click(function() {
+  //   var sEmail = $('#form_email').val();
+  //   // Checking Empty Fields
+  //   if ($.trim(sEmail).length == 0 ) {
+  //     alert('All fields are mandatory');
+  //     e.preventDefault();
+  //   }
+  //   if (validateEmail(sEmail)) {
+  //   alert('Nice!! your Email is valid, now you can continue..');
+  //   }
+  //   else {
+  //     alert('Invalid Email Address');
+  //     e.preventDefault();
+  //     }
+  //   });
+  //   // Function that validates email address through a regular expression.
+    
 });
+  
+// function validateEmail(sEmail) {
+//   var filter = /^[w-.+]+@[a-zA-Z0-9.-]+.[a-zA-z0-9]{2,4}$/;
+//   if (filter.test(sEmail)) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
 $(function () {
   $("#datepicker").datepicker({ 
@@ -102,3 +144,18 @@ $(function () {
         todayHighlight: true
   }).datepicker('update', new Date());
 });
+
+// var data = {
+//   email: $("#form_email").val(),
+//   date: $("#form_date").val(),
+//   //country: $("#countryselect").val(data.country)
+// };
+
+// $.ajax({
+//   type: "POST",
+//   url: "form_process.php",
+//   data: data,
+//   success: function(){
+//       //$('.success').fadeIn(1000);
+//   }
+// });

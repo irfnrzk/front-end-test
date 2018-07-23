@@ -134,47 +134,23 @@
 
         <section id="form-submission">
 
-          <?php
-          // define variables and set to empty values
-          $nameErr = $emailErr = $genderErr = $websiteErr = "";
-          $email = "";
-          // $date = $_POST['date'];
-          // $selected_val = $_POST['country'];  // Storing Selected Value In Variable
-
-          if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            
-            if (empty($_POST["email"])) {
-              $emailErr = "Email is required";
-            } else {
-              $email = test_input($_POST["email"]);
-              // check if e-mail address is well-formed
-              if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $emailErr = "Invalid email format"; 
-              }
-            }   
-          }
-
-          function test_input($data) {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-          }
-          ?>
+          
 
           <p><span class="error">* required field</span></p>
-          <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+          <?php //require 'form_process.php'; ?>
 
-            <input class="form-control" type="text" name="email" value="<?php echo $email;?>">
-            <span class="error">* <?php echo $emailErr;?></span>
+          <form method="POST" action="mail.php">  
 
-            <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy" style="position: relative;">
-              <input class="form-control" type="text" name="date" value="<?php echo $date;?>"/>
+            <input id="form-email" class="form-control" type="text" name="email" placeholder="Email">
+            <br>
+
+            <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+              <input id="form-date" class="form-control" type="text" name="date">
               <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
             </div>
+            <br>
 
-
-            <select name="country">
+            <select id="countryselect" name="country">
               <option value="Red">Red</option>
               <option value="Green">Green</option>
               <option value="Blue">Blue</option>
@@ -182,40 +158,11 @@
               <option value="Yellow">Yellow</option>
             </select>
 
+            <button id="form-submit" class="button" name="submit" type="submit" value="Send">submit</button>
 
-
-            <br><br>
-            <input type="submit" name="submit" value="Submit">  
+            <p class="form-message"></p>
           </form>
-
-          <?php
-            echo "<h2>Your Input:</h2>";
-
-
-            
-
-            if ($emailErr == ''){
-              echo $email;
-              echo "<br>";
-              if(isset($_POST['submit'])){
-                $selected_val = $_POST['country'];  // Storing Selected Value In Variable
-                $date = $_POST['date'];
-                echo $selected_val;
-                echo "<br>";
-                echo $date;
-              }
-              // echo $date;
-            }
-            ?>
-     
-
-
-          <!-- <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy" style="position: relative;">
-            <input class="form-control" type="text" name="date"/>
-            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-          </div> -->
-
-         
+        
 
         </section>
 
