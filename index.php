@@ -13,17 +13,11 @@
     <link rel="stylesheet" href="/bower_components/featherlight/src/featherlight.css">
     <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css">
     <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap-datepicker/css/datepicker.css">    
     <link rel="stylesheet" href="dist/css/style.css">
-    <link rel="stylesheet" href="/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
-<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" /> -->
-    
     
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
-    <script src="/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script> -->
-    
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>     
 
   </head>
   <body>
@@ -182,6 +176,7 @@
       <script src="/bower_components/jquery-migrate/jquery-migrate.min.js"></script>
       <script src="/bower_components/featherlight/release/featherlight.min.js"></script>
       <script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
+      <script src="/bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
       <script src="/bower_components/isotope-layout/dist/isotope.pkgd.min.js"></script>
       <script src="/assets/scripts/script.js"></script>
   </body>
