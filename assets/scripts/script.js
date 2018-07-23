@@ -89,10 +89,10 @@ $(document).ready(function(){
 
 
 
-  $('form').submit(function(e){
-    e.preventDefault();
-    var name = $()
-  });
+  // $('form').submit(function(e){
+  //   e.preventDefault();
+  //   var name = $()
+  // });
 
 });
 
