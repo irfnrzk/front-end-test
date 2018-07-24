@@ -5829,7 +5829,7 @@ button.close {
 .text-large {
   font-size: 16px; }
 
-.text-small, .box-filter .text-container address {
+.text-small, .box-filter .text-container address, footer .container address {
   font-size: 12px; }
 
 .text-grey {
@@ -5850,7 +5850,9 @@ button.close {
   padding-bottom: 10px; }
 
 .lightbox {
-  display: none; }
+  display: none;
+  background: #fff;
+  padding: 15px 0; }
 
 .btn-lightbox {
   background: #f68b20;
@@ -5890,7 +5892,7 @@ button.close {
 .text-large {
   font-size: 16px; }
 
-.text-small, .box-filter .text-container address {
+.text-small, .box-filter .text-container address, footer .container address {
   font-size: 12px; }
 
 .text-grey {
@@ -5911,7 +5913,9 @@ button.close {
   padding-bottom: 10px; }
 
 .lightbox {
-  display: none; }
+  display: none;
+  background: #fff;
+  padding: 15px 0; }
 
 .btn-lightbox {
   background: #f68b20;
@@ -6006,6 +6010,15 @@ section {
       width: 100%;
       height: 100%;
       position: relative; }
+
+.featherlight-content {
+  background: transparent !important; }
+
+.featherlight-close-icon {
+  background: #fff !important;
+  border-radius: 50%;
+  top: 15px !important;
+  right: 15px !important; }
 
 .section-container {
   background: #f3f3f3;
@@ -6159,4 +6172,17 @@ section {
       color: #fff; }
 
 .message-div {
-  display: none; }
+  display: none;
+  text-align: center; }
+
+footer .container {
+  border-top: 1px solid #dbdbdb; }
+  footer .container img {
+    vertical-align: bottom;
+    margin-top: 20px; }
+  footer .container address {
+    float: none;
+    margin-top: 20px; }
+    @media (min-width: 768px) {
+      footer .container address {
+        float: right; } }

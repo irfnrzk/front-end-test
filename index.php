@@ -8,14 +8,15 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lion Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="image/x-icon" rel="icon" href="favicon.ico" />
+
+    <title>Lion Test</title>
     <link rel="stylesheet" href="/bower_components/featherlight/src/featherlight.css">
     <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css">
     <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick-theme.css">
     <link rel="stylesheet" href="/bower_components/bootstrap-datepicker/css/datepicker.css">    
-    <link rel="stylesheet" href="dist/css/style.css">
-    
+    <link rel="stylesheet" href="dist/css/style.css">    
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>     
 
@@ -54,9 +55,10 @@
       <div class="container">        
         <a href="#" class="btn-lightbox" data-featherlight="#instructions">+instructions</a>
         <div class="lightbox" id="instructions">
-          <p><strong>The task:</strong><br/>Using stores.json file and lion-test.psd (as the mock up):</p>
-          <ul>
-            <li>Implementation of the mockup as a full responsive template;</li>
+          <div class="container">
+            <p><strong>The task:</strong><br/>Using stores.json file and lion-test.psd (as the mock up):</p>
+            <ul>
+              <li>Implementation of the mockup as a full responsive template;</li>
             <li>Header should be fixed and links take you the sections of the page via scroll;</li>
             <li>A lightbox should be used to see the "instructions";</li>
             <li>The form should have validation;</li>
@@ -69,12 +71,13 @@
             <li>Whenever a filter is clicked for a second time (unselected), show all the valid stores again ("status":"true").</li>
           </ul>
         </div>
-
+      </div>
+        
         <section id="photos">
           <h2 class="text-large text-bold title-section">Photos</h2>          
           <div class="section-container">
             <div class="carousel-container">
-              <div class="carousel-top">
+              <div class="carousel-top hidden-xs">
                 <div><img src="http://via.placeholder.com/900x260"></div>
                 <div><img src="http://via.placeholder.com/900x260"></div>
                 <div><img src="http://via.placeholder.com/900x260"></div>
@@ -191,7 +194,6 @@
               <?php } ?>    
             <?php endforeach; ?>
           </div>
-
           <div class="message-div">
             <span>Sorry, the place you're looking for is currently not available. Check again soon!</span>
           </div>
@@ -199,12 +201,25 @@
           
       </div>
     </main>
+
+    <footer>
+      <div class="container">
+        <img src="/assets/images/footer-logo.png" alt="Lion&amp;Lion">
+        <address>
+          Suite 17-1, Hampshire Place,<br>
+          No.1, Jalan Mayang Sari,<br>
+          50450, Kuala Lumpur Malaysia<br>
+          E: <a href="mailto:info@lionandlion.com" target="_blank">info@lionandlion.com</a><br>
+          T: <a href="tel:+60327800950" target="_blank">+60327800950</a>
+        </address>
+      </div>
+    </footer>
       
-      <script src="/bower_components/jquery-migrate/jquery-migrate.min.js"></script>
-      <script src="/bower_components/featherlight/release/featherlight.min.js"></script>
-      <script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
-      <script src="/bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
-      <script src="/bower_components/isotope-layout/dist/isotope.pkgd.min.js"></script>
-      <script src="/assets/scripts/script.js"></script>
+    <script src="/bower_components/jquery-migrate/jquery-migrate.min.js"></script>
+    <script src="/bower_components/featherlight/release/featherlight.min.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
+    <script src="/bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+    <script src="/bower_components/isotope-layout/dist/isotope.pkgd.min.js"></script>
+    <script src="/assets/scripts/script.js"></script>
   </body>
 </html>

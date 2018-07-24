@@ -61,6 +61,8 @@ $dark-blue: #1a0154;
 
 .lightbox{
   display: none;
+  background: #fff;
+  padding: 15px 0;
 }
 
 .btn-lightbox{
@@ -74,6 +76,7 @@ $dark-blue: #1a0154;
   @media (min-width: 768px){
     width: auto;
   }
+  
   &:hover{
     color: black;
     box-shadow: 2px 2px 2px $dark-grey;

@@ -1,6 +1,6 @@
 $(document).ready(function(){
   
-  // collapse mobile navbar when click
+  // Collapse mobile navbar when click
   $(document).on('click','.navbar-collapse.in',function(e) {
     if( $(e.target).is('a:not(".dropdown-toggle")') ) {
         $(this).collapse('hide');
@@ -15,7 +15,7 @@ $(document).ready(function(){
     }, 500);
   });
 
-  //Slick-carousel config
+  // Slick-carousel config
   $('.carousel-top').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
