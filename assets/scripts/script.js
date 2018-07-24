@@ -1,26 +1,31 @@
 // init Isotope
 var $grid = $('.grid');
-$grid.isotope();
+$grid.isotope({
+  //itemSelector: '[data-state]'
+});
 
 // filter items on button click
 $filters = $('.filter-li-group').on('click', 'li', function(){
   
-  var filterValue = $(this).attr('data-filter');
+  var filterValue = "[data-state='"+$(this).attr('data-filter')+"']";
   var filterValue;
   
   if ($(this).is('.is-checked')){
     // uncheck
-    filterValue = '*';
-  } else{
-    filterValue = $(this).attr('data-filter');
+    filterValue = "";
+  } else {
+    filterValue = "[data-state='"+$(this).attr('data-filter')+"']";
     $filters.find('.is-checked').removeClass('is-checked');
   }
   
   $(this).toggleClass('is-checked');    
-  $grid.isotope({ filter: filterValue });
+  $grid.isotope({ 
+    itemSelector: '[data-state]',
+    filter: filterValue });
+  //$grid.isotope({ filter: filterValue });
+ 
 
   if ( !$grid.data('isotope').filteredItems.length ) {
-    console.log('no');
     $('.message-div').fadeIn('slow');
   } else {
     $('.message-div').fadeOut('fast');

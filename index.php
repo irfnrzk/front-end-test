@@ -161,15 +161,15 @@
         <?php include('places.php'); ?>
         <ul class="list-nostyle filter-li-group">
           <?php foreach($values as $value) : ?>
-            <li class="text-small text-bold" data-filter=".<?= $value; ?>"><?= $value; ?></li>
+            <li class="text-small text-bold" data-filter="<?= $value; ?>"><?= $value; ?></li>
           <?php endforeach; ?>
         </ul>
         
         <div class="grid">  
           <?php foreach ($stores as $store) : ?>
             <?php if (!$store->status == false) { ?>
-              <div class="col-sm-4 <?= $store->state; ?>">
-                div.
+              <div class="col-sm-4" data-state="<?= $store->state; ?>">
+              <!-- <div class="col-sm-4 <?= $store->state; ?>"> -->
                 <?= $store->name; ?>
                 <?= $store->state; ?>
               </div>
