@@ -1,46 +1,11 @@
-// init Isotope
-var $grid = $('.grid');
-$grid.isotope({
-  //itemSelector: '[data-state]'
-});
-
-// filter items on button click
-$filters = $('.filter-li-group').on('click', 'li', function(){
-  
-  var filterValue = "[data-state='"+$(this).attr('data-filter')+"']";
-  var filterValue;
-  
-  if ($(this).is('.is-checked')){
-    // uncheck
-    filterValue = "";
-  } else {
-    filterValue = "[data-state='"+$(this).attr('data-filter')+"']";
-    $filters.find('.is-checked').removeClass('is-checked');
-  }
-  
-  $(this).toggleClass('is-checked');    
-  $grid.isotope({ 
-    itemSelector: '[data-state]',
-    filter: filterValue });
-  //$grid.isotope({ filter: filterValue });
- 
-
-  if ( !$grid.data('isotope').filteredItems.length ) {
-    $('.message-div').fadeIn('slow');
-  } else {
-    $('.message-div').fadeOut('fast');
-  };
-
-});
-
-// collapse mobile navbar when click
-$(document).on('click','.navbar-collapse.in',function(e) {
-  if( $(e.target).is('a:not(".dropdown-toggle")') ) {
-      $(this).collapse('hide');
-  }
-});
-
 $(document).ready(function(){
+  
+  // collapse mobile navbar when click
+  $(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a:not(".dropdown-toggle")') ) {
+        $(this).collapse('hide');
+    }
+  });
 
   // Scroll to section
   $('.nav-link').click(function(){    
@@ -92,6 +57,13 @@ $(document).ready(function(){
     ]
   });
 
+  // Bootstrap datepicker init
+  $(".datepicker").datepicker({ 
+    autoclose: true, 
+    todayHighlight: true
+  }).datepicker('update', new Date());
+
+  // Ajax form submission
   $('form').submit(function(e){
     event.preventDefault();
     var email = $('#form-email').val();
@@ -106,61 +78,37 @@ $(document).ready(function(){
       country: country
     });
 
-  });
-
-
-
-  // $('form').submit(function(e){
-  //   e.preventDefault();
-  //   var name = $()
-  // });
-
-  // $('#submit').click(function() {
-  //   var sEmail = $('#form_email').val();
-  //   // Checking Empty Fields
-  //   if ($.trim(sEmail).length == 0 ) {
-  //     alert('All fields are mandatory');
-  //     e.preventDefault();
-  //   }
-  //   if (validateEmail(sEmail)) {
-  //   alert('Nice!! your Email is valid, now you can continue..');
-  //   }
-  //   else {
-  //     alert('Invalid Email Address');
-  //     e.preventDefault();
-  //     }
-  //   });
-  //   // Function that validates email address through a regular expression.
-    
+  });    
 });
+
+// init Isotope
+var $grid = $('.grid');
+$grid.isotope();
+
+// filter items on button click
+$filters = $('.filter-li-group').on('click', 'li', function(){
   
-// function validateEmail(sEmail) {
-//   var filter = /^[w-.+]+@[a-zA-Z0-9.-]+.[a-zA-z0-9]{2,4}$/;
-//   if (filter.test(sEmail)) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
+  var filterValue = "[data-state='"+$(this).attr('data-filter')+"']";
+  var filterValue;
+  
+  if ($(this).is('.is-checked')){
+    // uncheck
+    filterValue = "";
+  } else {
+    filterValue = "[data-state='"+$(this).attr('data-filter')+"']";
+    $filters.find('.is-checked').removeClass('is-checked');
+  }
+  
+  $(this).toggleClass('is-checked');    
+  $grid.isotope({ 
+    itemSelector: '[data-state]',
+    filter: filterValue });
+  //$grid.isotope({ filter: filterValue }); 
 
-$(function () {
-  $(".datepicker").datepicker({ 
-        autoclose: true, 
-        todayHighlight: true
-  }).datepicker('update', new Date());
+  // display message if search is empty
+  if ( !$grid.data('isotope').filteredItems.length ) {
+    $('.message-div').fadeIn('slow');
+  } else {
+    $('.message-div').fadeOut('fast');
+  };
 });
-
-// var data = {
-//   email: $("#form_email").val(),
-//   date: $("#form_date").val(),
-//   //country: $("#countryselect").val(data.country)
-// };
-
-// $.ajax({
-//   type: "POST",
-//   url: "form_process.php",
-//   data: data,
-//   success: function(){
-//       //$('.success').fadeIn(1000);
-//   }
-// });

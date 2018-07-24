@@ -36,7 +36,7 @@
             <span class="icon-bar"></span>
           </button>
           <div class="navbar-brand">
-            <!-- <a class="navbar-brand-link" href="javascript:void(0);" title="Lion&amp;Lion"><img src="/assets/images/header-logo.png" alt="Lion&amp;Lion"></a> -->
+            <a class="navbar-brand-link" href="javascript:void(0);" title="Lion&amp;Lion"><img src="/assets/images/header-logo.png" alt="Lion&amp;Lion"></a>
           </div>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -44,7 +44,7 @@
             <li><a class="nav-link" href="#photos">Photos</a></li>
             <li><a class="nav-link" href="#blog">Blog</a></li>
             <li><a class="nav-link" href="#form-submission">Form</a></li>
-            <li><a class="nav-link" href="#">Places</a></li>
+            <li><a class="nav-link" href="#places">Places</a></li>
           </ul>
         </div>
       </div>
@@ -165,21 +165,37 @@
           <?php endforeach; ?>
         </ul>
         
-        <div class="grid">  
-          <?php foreach ($stores as $store) : ?>
-            <?php if (!$store->status == false) { ?>
-              <div class="col-sm-4" data-state="<?= $store->state; ?>">
-              <!-- <div class="col-sm-4 <?= $store->state; ?>"> -->
-                <?= $store->name; ?>
-                <?= $store->state; ?>
-              </div>
-            <?php } ?>    
-          <?php endforeach; ?>
-        </div>
+        <section id="places">
+          <h2 class="text-large text-bold title-section">Places</h2>
+          <div class="grid">  
+            <?php foreach ($stores as $store) : ?>
+              <?php if (!$store->status == false) { ?>
+                <div class="col-xs-12 col-sm-4 zero-pad" data-state="<?= $store->state; ?>">
+                  <div class="box-filter">
+                    <figure class="image-container">
+                      <img src="<?= $store->image; ?>" alt="">
+                    </figure>
+                    <div class="text-container text-container-top">
+                      <span class="text-small text-bold"><?= $store->name; ?></span>
+                      <address><?= $store->address; ?><br><?= $store->state; ?></address>
+                      <span class="text-small text-bold">Operating Hours</span>
+                      <span class="text-small"><?= $store->operation_hours; ?></span>
+                    </div>
+                    <div class="text-container text-container-bottom">
+                      <span class="text-small text-bold">Telephone</span>
+                      <span class="text-small"><?= $store->phone; ?></span>
+                    </div>
+                    <a href="https://maps.google.com/?q=<?= $store->address; ?> <?= $store->state; ?>" target="_blank" class="box-filter-link text-bold text-small">Get Directions</a>                  
+                  </div>
+                </div>
+              <?php } ?>    
+            <?php endforeach; ?>
+          </div>
 
-        <div class="message-div">
-          <span>Sorry, the place you're looking for is currently not available. Check again soon!</span>
-        </div>
+          <div class="message-div">
+            <span>Sorry, the place you're looking for is currently not available. Check again soon!</span>
+          </div>
+        </section>
           
       </div>
     </main>

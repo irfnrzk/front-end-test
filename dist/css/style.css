@@ -5820,7 +5820,7 @@ button.close {
   font-style: normal;
   font-weight: 400; }
 
-.center-absolute, .navbar-brand-link img {
+.center-absolute, .navbar-brand-link img, .box-filter .image-container img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -5829,7 +5829,7 @@ button.close {
 .text-large {
   font-size: 16px; }
 
-.text-small {
+.text-small, .box-filter .text-container address {
   font-size: 12px; }
 
 .text-grey {
@@ -5855,7 +5855,7 @@ button.close {
 .btn-lightbox {
   background: #f68b20;
   color: #fff;
-  padding: 5px 20px;
+  padding: 5px 30px;
   border-radius: 5px;
   border: 0;
   transition: all 0.5s ease;
@@ -5871,6 +5871,9 @@ button.close {
   list-style-type: none; }
   .list-nostyle li {
     display: inline-block; }
+
+.zero-pad {
+  padding: 0 !important; }
 
 @font-face {
   font-family: "FontAwesome";
@@ -5878,7 +5881,7 @@ button.close {
   font-style: normal;
   font-weight: 400; }
 
-.center-absolute, .navbar-brand-link img {
+.center-absolute, .navbar-brand-link img, .box-filter .image-container img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -5887,7 +5890,7 @@ button.close {
 .text-large {
   font-size: 16px; }
 
-.text-small {
+.text-small, .box-filter .text-container address {
   font-size: 12px; }
 
 .text-grey {
@@ -5913,7 +5916,7 @@ button.close {
 .btn-lightbox {
   background: #f68b20;
   color: #fff;
-  padding: 5px 20px;
+  padding: 5px 30px;
   border-radius: 5px;
   border: 0;
   transition: all 0.5s ease;
@@ -5929,6 +5932,9 @@ button.close {
   list-style-type: none; }
   .list-nostyle li {
     display: inline-block; }
+
+.zero-pad {
+  padding: 0 !important; }
 
 body {
   margin: 0 !important; }
@@ -6051,23 +6057,47 @@ section {
       margin: 0; } }
   .box-container:hover {
     box-shadow: 0 0 13px #dbdbdb; }
+  .box-container .image-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 33.3%;
+    transition: all 0.5s ease;
+    display: inline-block; }
+    .box-container .image-container:hover {
+      opacity: .5; }
+    .box-container .image-container img {
+      width: 100%; }
+  .box-container .text-container {
+    padding: 10px; }
 
-.image-container {
-  width: 100%;
-  height: 0;
-  padding-bottom: 33.3%;
-  transition: all 0.5s ease;
-  display: inline-block; }
-  .image-container:hover {
-    opacity: .5; }
-  .image-container img {
-    width: 100%; }
-
-.text-container {
-  padding: 10px; }
-
-.message-div {
-  display: none; }
+.box-filter {
+  border: 1px solid #1a0154;
+  margin: 7.5px; }
+  .box-filter .image-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 48.15%;
+    overflow: hidden;
+    position: relative; }
+    .box-filter .image-container img {
+      width: 100%; }
+  .box-filter .text-container {
+    padding: 10px; }
+    .box-filter .text-container-top span, .box-filter .text-container-bottom span {
+      display: block; }
+    .box-filter .text-container-bottom {
+      border-top: 1px solid #1a0154; }
+  .box-filter-link {
+    background: #1a0154;
+    color: #fff;
+    display: block;
+    text-align: center;
+    border-top: 1px solid #1a0154;
+    transition: all 0.5s ease;
+    padding: 10px 0; }
+    .box-filter-link:hover {
+      background: #fff;
+      color: #1a0154; }
 
 .input-group {
   margin-top: 20px;
@@ -6127,3 +6157,6 @@ section {
       cursor: pointer;
       background: #404040;
       color: #fff; }
+
+.message-div {
+  display: none; }

@@ -33,7 +33,6 @@
   else{
     echo 'an error occured';
   }
-
 ?>
 
 <script>
