@@ -10,7 +10,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="image/x-icon" rel="icon" href="favicon.ico" />
-
     <title>Lion Test</title>
     <link rel="stylesheet" href="/bower_components/featherlight/src/featherlight.css">
     <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css">
@@ -18,15 +17,12 @@
     <link rel="stylesheet" href="/bower_components/bootstrap-datepicker/css/datepicker.css">    
     <link rel="stylesheet" href="dist/css/style.css">    
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>     
-
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
   </head>
   <body>
     <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    
-    
+    <![endif]-->   
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -73,133 +69,130 @@
         </div>
       </div>
         
-        <section id="photos">
-          <h2 class="text-large text-bold title-section">Photos</h2>          
-          <div class="section-container">
-            <div class="carousel-container">
-              <div class="carousel-top hidden-xs">
-                <div><img src="http://via.placeholder.com/900x260"></div>
-                <div><img src="http://via.placeholder.com/900x260"></div>
-                <div><img src="http://via.placeholder.com/900x260"></div>
-                <div><img src="http://via.placeholder.com/900x260"></div>
-                <div><img src="http://via.placeholder.com/900x260"></div>
-                <div><img src="http://via.placeholder.com/900x260"></div>
-                <div><img src="http://via.placeholder.com/900x260"></div>
-              </div>
-              <div class="carousel-bottom">
-                <div><img src="http://via.placeholder.com/350x150"></div>
-                <div><img src="http://via.placeholder.com/350x150"></div>
-                <div><img src="http://via.placeholder.com/350x150"></div>
-                <div><img src="http://via.placeholder.com/350x150"></div>
-                <div><img src="http://via.placeholder.com/350x150"></div>
-                <div><img src="http://via.placeholder.com/350x150"></div>
-                <div><img src="http://via.placeholder.com/350x150"></div>
+      <section id="photos">
+        <h2 class="text-large text-bold title-section">Photos</h2>          
+        <div class="section-container">
+          <div class="carousel-container">
+            <div class="carousel-top hidden-xs">
+              <div><img src="http://via.placeholder.com/900x260"></div>
+              <div><img src="http://via.placeholder.com/900x260"></div>
+              <div><img src="http://via.placeholder.com/900x260"></div>
+              <div><img src="http://via.placeholder.com/900x260"></div>
+              <div><img src="http://via.placeholder.com/900x260"></div>
+              <div><img src="http://via.placeholder.com/900x260"></div>
+              <div><img src="http://via.placeholder.com/900x260"></div>
+            </div>
+            <div class="carousel-bottom">
+              <div><img src="http://via.placeholder.com/350x150"></div>
+              <div><img src="http://via.placeholder.com/350x150"></div>
+              <div><img src="http://via.placeholder.com/350x150"></div>
+              <div><img src="http://via.placeholder.com/350x150"></div>
+              <div><img src="http://via.placeholder.com/350x150"></div>
+              <div><img src="http://via.placeholder.com/350x150"></div>
+              <div><img src="http://via.placeholder.com/350x150"></div>
+            </div>
+          </div>
+        </div>         
+      </section>
+
+      <section id="blog">
+        <h2 class="text-large text-bold title-section">Blog</h2>
+        <div class="row">            
+          <div class="col-sm-4">
+            <div class="box-container">
+              <a href="javascript:void(0);" class="image-container">
+                <img src="http://via.placeholder.com/300x100">
+              </a>
+              <div class="text-container">
+                <a href="javascript:void(0);" class="text-small text-grey text-link">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id sem nec nisl condimentum viverra a et velit. Donec eu tortor mi. Aliquam erat volutpat.</a>
               </div>
             </div>
-          </div>         
-        </section>
-
-        <section id="blog">
-          <h2 class="text-large text-bold title-section">Blog</h2>
-          <div class="row">            
-            <div class="col-sm-4">
-              <div class="box-container">
-                <a href="javascript:void(0);" class="image-container">
-                  <img src="http://via.placeholder.com/300x100">
-                </a>
-                <div class="text-container">
-                  <a href="javascript:void(0);" class="text-small text-grey text-link">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id sem nec nisl condimentum viverra a et velit. Donec eu tortor mi. Aliquam erat volutpat.</a>
-                </div>
+          </div>            
+          <div class="col-sm-4">
+            <div class="box-container">
+              <a href="javascript:void(0);" class="image-container">
+                <img src="http://via.placeholder.com/300x100">
+              </a>
+              <div class="text-container">
+                <a href="javascript:void(0);" class="text-small text-grey text-link">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id sem nec nisl condimentum viverra a et velit. Donec eu tortor mi. Aliquam erat volutpat.</a>
               </div>
-            </div>            
-            <div class="col-sm-4">
-              <div class="box-container">
-                <a href="javascript:void(0);" class="image-container">
-                  <img src="http://via.placeholder.com/300x100">
-                </a>
-                <div class="text-container">
-                  <a href="javascript:void(0);" class="text-small text-grey text-link">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id sem nec nisl condimentum viverra a et velit. Donec eu tortor mi. Aliquam erat volutpat.</a>
-                </div>
-              </div>
-            </div>            
-            <div class="col-sm-4">
-              <div class="box-container">
-                <a href="javascript:void(0);" class="image-container">
-                  <img src="http://via.placeholder.com/300x100">
-                </a>
-                <div class="text-container">
-                  <a href="javascript:void(0);" class="text-small text-grey text-link">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id sem nec nisl condimentum viverra a et velit. Donec eu tortor mi. Aliquam erat volutpat.</a>
-                </div>
+            </div>
+          </div>            
+          <div class="col-sm-4">
+            <div class="box-container">
+              <a href="javascript:void(0);" class="image-container">
+                <img src="http://via.placeholder.com/300x100">
+              </a>
+              <div class="text-container">
+                <a href="javascript:void(0);" class="text-small text-grey text-link">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id sem nec nisl condimentum viverra a et velit. Donec eu tortor mi. Aliquam erat volutpat.</a>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="form-submission">
-          <h2 class="text-large text-bold title-section">Form</h2>   
-          <span class="text-small text-grey">The fields with * are obligatory.</span>
-          <form method="POST" action="mail.php">
-            <div class="input-group">
-              <label>*E-mail:</label>
-              <input id="form-email" class="form-control" type="text" name="email" placeholder="Email">
-            </div>
-            <div class="input-group date datepicker" data-date-format="mm-dd-yyyy">
-              <label>*Date:</label>
-              <input id="form-date" class="form-control" type="text" name="date">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            </div>
-            <div class="input-group">
-              <label>*Country:</label>
-              <select id="countryselect" class="form-control" name="country">
-                <option value="Malaysia">Malaysia</option>
-                <option value="Singapore">Singapore</option>
-                <option value="Indonesia">Indonesia</option>
-              </select>
-            </div>
-            <button id="form-submit" class="btn-lightbox" name="submit" type="submit" value="Send">Send</button>
-            <p class="form-message"></p>
-          </form>       
-        </section>
+      <section id="form-submission">
+        <h2 class="text-large text-bold title-section">Form</h2>   
+        <span class="text-small text-grey">The fields with * are obligatory.</span>
+        <form method="POST" action="mail.php">
+          <div class="input-group">
+            <label>*E-mail:</label>
+            <input id="form-email" class="form-control" type="text" name="email" placeholder="Email">
+          </div>
+          <div class="input-group date datepicker" data-date-format="mm-dd-yyyy">
+            <label>*Date:</label>
+            <input id="form-date" class="form-control" type="text" name="date">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+          </div>
+          <div class="input-group">
+            <label>*Country:</label>
+            <select id="countryselect" class="form-control" name="country">
+              <option value="Malaysia">Malaysia</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Indonesia">Indonesia</option>
+            </select>
+          </div>
+          <button id="form-submit" class="btn-lightbox" name="submit" type="submit" value="Send">Send</button>
+          <p class="form-message"></p>
+        </form>       
+      </section>
 
+      <section id="places">
+        <h2 class="text-large text-bold title-section">Places</h2>
         <?php include('places.php'); ?>
         <ul class="list-nostyle filter-li-group">
           <?php foreach($values as $value) : ?>
             <li class="text-small text-bold" data-filter="<?= $value; ?>"><?= $value; ?></li>
           <?php endforeach; ?>
         </ul>
-        
-        <section id="places">
-          <h2 class="text-large text-bold title-section">Places</h2>
-          <div class="grid">  
-            <?php foreach ($stores as $store) : ?>
-              <?php if (!$store->status == false) { ?>
-                <div class="col-xs-12 col-sm-4 zero-pad" data-state="<?= $store->state; ?>">
-                  <div class="box-filter">
-                    <figure class="image-container">
-                      <img src="<?= $store->image; ?>" alt="">
-                    </figure>
-                    <div class="text-container text-container-top">
-                      <span class="text-small text-bold"><?= $store->name; ?></span>
-                      <address><?= $store->address; ?><br><?= $store->state; ?></address>
-                      <span class="text-small text-bold">Operating Hours</span>
-                      <span class="text-small"><?= $store->operation_hours; ?></span>
-                    </div>
-                    <div class="text-container text-container-bottom">
-                      <span class="text-small text-bold">Telephone</span>
-                      <span class="text-small"><?= $store->phone; ?></span>
-                    </div>
-                    <a href="https://maps.google.com/?q=<?= $store->address; ?> <?= $store->state; ?>" target="_blank" class="box-filter-link text-bold text-small">Get Directions</a>                  
+        <div class="grid">  
+          <?php foreach ($stores as $store) : ?>
+            <?php if (!$store->status == false) { ?>
+              <div class="col-xs-12 col-sm-4 zero-pad" data-state="<?= $store->state; ?>">
+                <div class="box-filter">
+                  <figure class="image-container">
+                    <img src="<?= $store->image; ?>" alt="">
+                  </figure>
+                  <div class="text-container text-container-top">
+                    <span class="text-small text-bold"><?= $store->name; ?></span>
+                    <address><?= $store->address; ?><br><?= $store->state; ?></address>
+                    <span class="text-small text-bold">Operating Hours</span>
+                    <span class="text-small"><?= $store->operation_hours; ?></span>
                   </div>
+                  <div class="text-container text-container-bottom">
+                    <span class="text-small text-bold">Telephone</span>
+                    <span class="text-small"><?= $store->phone; ?></span>
+                  </div>
+                  <a href="https://maps.google.com/?q=<?= $store->address; ?> <?= $store->state; ?>" target="_blank" class="box-filter-link text-bold text-small">Get Directions</a>                  
                 </div>
-              <?php } ?>    
-            <?php endforeach; ?>
-          </div>
-          <div class="message-div">
-            <span>Sorry, the place you're looking for is currently not available. Check again soon!</span>
-          </div>
-        </section>
-          
-      </div>
+              </div>
+            <?php } ?>    
+          <?php endforeach; ?>
+        </div>
+        <div class="message-div">
+          <span>Sorry, the place you're looking for is currently not available. Check again soon!</span>
+        </div>
+      </section>    
     </main>
 
     <footer>
