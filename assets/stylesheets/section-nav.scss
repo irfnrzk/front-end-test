@@ -117,8 +117,11 @@ section{
 }
 
 .carousel{
-  width: 90%;
-  margin:0px auto;
+
+  &-bottom{
+    width: 90%;
+    margin:0px auto;
+  }
 
   &-container{
     background: $light-grey;
@@ -205,6 +208,86 @@ section{
   display: none;
 }
 
-// .input-error{
-//   box-shadow: 0 0 5px red;
-// }
+.input-group{
+  margin-top: 20px;
+  display: block;
+  padding: 0;
+  z-index: 0;
+
+  label{
+    display: block;
+  }
+
+  input{
+    &[name=date]{
+      max-width: calc(100% - 39px);
+      @media (min-width: 768px){
+        max-width: calc(260px - 39px);
+      }
+    }
+  }
+
+  .form-control{
+    width: 100%;
+    @media (min-width: 768px){
+      max-width: 260px;
+    }
+
+    &[name=email]{
+      display: block;
+      float: none;
+    }
+
+    &[name=country]{
+      float: none;
+      margin-bottom: 40px;
+    }
+  }
+
+  &-addon{
+    padding: 8px 12px;
+    width: auto;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+.form-message{
+  margin-top: 15px;
+  .form-error{
+    color: $lion-red;
+    font-weight: bold;
+  }
+  .form-correct{
+    color: $orange;
+    font-weight: bold;
+  }
+}
+
+.filter-li-group{
+  background: $light-grey;
+  white-space: nowrap;
+  overflow: scroll;
+  text-align: center;
+  @media (min-width: 768px){
+    overflow: hidden;
+    white-space: normal;
+  }
+  .is-checked{
+    background: $dark-grey;
+    color: #fff;
+  }
+  li{
+    min-width: 110px;
+    padding: 15px 0;
+    transition: all 0.5s ease;
+    //background: $light-grey;
+    &:hover{
+      cursor: pointer;
+      background: $dark-grey;
+      color: #fff;
+    }
+
+  }
+}

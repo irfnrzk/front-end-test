@@ -7,18 +7,22 @@
 
     $errorEmpty = false;
     $errorEmail = false;
+    $errorDate = false;
 
     if (empty($email)){
-      echo "<span class='form-error'>Input email!</span>";
+      echo "<span class='form-error'>Input email!</span><br>";
       $errorEmpty = true;
     }
     elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-      echo "<span class='form-error'>email not valid</span>";
+      echo "<span class='form-error'>Email is not valid!</span><br>";
       $errorEmail = true;
     }
-    elseif ($errorEmpty == false && $errorEmail == false){
-
-      
+    if (empty($date)){
+      echo "<span class='form-error'>Input date!</span>";
+      $errorDate = true;
+    }
+    elseif ($errorEmpty == false && $errorEmail == false && $errorDate == false){     
+      echo "<span class='form-correct'>Submitted!</span><br>"; 
       echo $email;
       echo "<br>";
       echo $selected_val;

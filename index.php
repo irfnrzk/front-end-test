@@ -36,14 +36,14 @@
             <span class="icon-bar"></span>
           </button>
           <div class="navbar-brand">
-            <a class="navbar-brand-link" href="javascript:void(0);" title="Lion&amp;Lion"><img src="/assets/images/header-logo.png" alt="Lion&amp;Lion"></a>
+            <!-- <a class="navbar-brand-link" href="javascript:void(0);" title="Lion&amp;Lion"><img src="/assets/images/header-logo.png" alt="Lion&amp;Lion"></a> -->
           </div>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a class="nav-link" href="#photos">Photos</a></li>
             <li><a class="nav-link" href="#blog">Blog</a></li>
-            <li><a class="nav-link" href="#">Form</a></li>
+            <li><a class="nav-link" href="#form-submission">Form</a></li>
             <li><a class="nav-link" href="#">Places</a></li>
           </ul>
         </div>
@@ -74,7 +74,7 @@
           <h2 class="text-large text-bold title-section">Photos</h2>          
           <div class="section-container">
             <div class="carousel-container">
-              <div class="carousel-for">
+              <div class="carousel-top">
                 <div><img src="http://via.placeholder.com/900x260"></div>
                 <div><img src="http://via.placeholder.com/900x260"></div>
                 <div><img src="http://via.placeholder.com/900x260"></div>
@@ -83,7 +83,7 @@
                 <div><img src="http://via.placeholder.com/900x260"></div>
                 <div><img src="http://via.placeholder.com/900x260"></div>
               </div>
-              <div class="carousel">
+              <div class="carousel-bottom">
                 <div><img src="http://via.placeholder.com/350x150"></div>
                 <div><img src="http://via.placeholder.com/350x150"></div>
                 <div><img src="http://via.placeholder.com/350x150"></div>
@@ -133,64 +133,49 @@
         </section>
 
         <section id="form-submission">
-
-          
-
-          <p><span class="error">* required field</span></p>
-          <?php //require 'form_process.php'; ?>
-
-          <form method="POST" action="mail.php">  
-
-            <input id="form-email" class="form-control" type="text" name="email" placeholder="Email">
-            <br>
-
-            <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+          <h2 class="text-large text-bold title-section">Form</h2>   
+          <span class="text-small text-grey">The fields with * are obligatory.</span>
+          <form method="POST" action="mail.php">
+            <div class="input-group">
+              <label>*E-mail:</label>
+              <input id="form-email" class="form-control" type="text" name="email" placeholder="Email">
+            </div>
+            <div class="input-group date datepicker" data-date-format="mm-dd-yyyy">
+              <label>*Date:</label>
               <input id="form-date" class="form-control" type="text" name="date">
               <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
             </div>
-            <br>
-
-            <select id="countryselect" name="country">
-              <option value="Red">Red</option>
-              <option value="Green">Green</option>
-              <option value="Blue">Blue</option>
-              <option value="Pink">Pink</option>
-              <option value="Yellow">Yellow</option>
-            </select>
-
-            <button id="form-submit" class="button" name="submit" type="submit" value="Send">submit</button>
-
+            <div class="input-group">
+              <label>*Country:</label>
+              <select id="countryselect" class="form-control" name="country">
+                <option value="Malaysia">Malaysia</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Indonesia">Indonesia</option>
+              </select>
+            </div>
+            <button id="form-submit" class="btn-lightbox" name="submit" type="submit" value="Send">Send</button>
             <p class="form-message"></p>
-          </form>
-        
-
+          </form>       
         </section>
 
-        <?php
-          // Read and decode json
-          $json = file_get_contents('stores.json');
-          $stores = json_decode($json);
-          
-          // Remove repeated "state" for button filter 
-          foreach($stores as $store){  
-            $result[$store->state] = null;
-          }
-          $values = array_keys($result); 
-        ?>
-
-        <div class="button-group filter-button-group">
+        <?php include('places.php'); ?>
+        <ul class="list-nostyle filter-li-group">
           <?php foreach($values as $value) : ?>
-            <button data-filter=".<?= $value; ?>"><?= $value; ?></button>
-          <?php endforeach; ?>
-        </div>
-        
-        <ul class="grid">  
-          <?php foreach ($stores as $store) : ?>
-          <?php if (!$store->status == false) { ?>
-            <li class="<?= $store->state; ?>"><?= $store->state; ?></li>
-          <?php } ?>    
+            <li class="text-small text-bold" data-filter=".<?= $value; ?>"><?= $value; ?></li>
           <?php endforeach; ?>
         </ul>
+        
+        <div class="grid">  
+          <?php foreach ($stores as $store) : ?>
+            <?php if (!$store->status == false) { ?>
+              <div class="col-sm-4 <?= $store->state; ?>">
+                div.
+                <?= $store->name; ?>
+                <?= $store->state; ?>
+              </div>
+            <?php } ?>    
+          <?php endforeach; ?>
+        </div>
 
         <div class="message-div">
           <span>Sorry, the place you're looking for is currently not available. Check again soon!</span>

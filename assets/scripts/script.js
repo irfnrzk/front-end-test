@@ -3,7 +3,7 @@ var $grid = $('.grid');
 $grid.isotope();
 
 // filter items on button click
-$filters = $('.filter-button-group').on('click', 'button', function(){
+$filters = $('.filter-li-group').on('click', 'li', function(){
   
   var filterValue = $(this).attr('data-filter');
   var filterValue;
@@ -46,18 +46,18 @@ $(document).ready(function(){
   });
 
   //Slick-carousel config
-  $('.carousel-for').slick({
+  $('.carousel-top').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: '.carousel'
+    asNavFor: '.carousel-bottom'
   });
 
-  $('.carousel').slick({
+  $('.carousel-bottom').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
-    asNavFor: '.carousel-for',
+    asNavFor: '.carousel-top',
     centerMode: true,
     focusOnSelect: true,
     responsive: [
@@ -139,7 +139,7 @@ $(document).ready(function(){
 // }
 
 $(function () {
-  $("#datepicker").datepicker({ 
+  $(".datepicker").datepicker({ 
         autoclose: true, 
         todayHighlight: true
   }).datepicker('update', new Date());
