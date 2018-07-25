@@ -28,7 +28,7 @@
             <span class="icon-bar"></span>
           </button>
           <div class="navbar-brand">
-            <!-- <a class="navbar-brand-link" href="javascript:void(0);" title="Lion&amp;Lion"><img src="/assets/images/header-logo.png" alt="Lion&amp;Lion"></a> -->
+            <a class="navbar-brand-link" href="javascript:void(0);" title="Lion&amp;Lion"><img src="/assets/images/header-logo.png" alt="Lion&amp;Lion"></a>
           </div>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
