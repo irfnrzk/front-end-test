@@ -11,13 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="image/x-icon" rel="icon" href="favicon.ico" />
     <title>Lion Test</title>
-    <link rel="stylesheet" href="/bower_components/featherlight/src/featherlight.css">
-    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick-theme.css">
-    <link rel="stylesheet" href="/bower_components/bootstrap-datepicker/css/datepicker.css">    
-    <link rel="stylesheet" href="dist/css/style.css">    
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="dist/css/stylesheet.css">    
+    
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -33,7 +28,7 @@
             <span class="icon-bar"></span>
           </button>
           <div class="navbar-brand">
-            <a class="navbar-brand-link" href="javascript:void(0);" title="Lion&amp;Lion"><img src="/assets/images/header-logo.png" alt="Lion&amp;Lion"></a>
+            <!-- <a class="navbar-brand-link" href="javascript:void(0);" title="Lion&amp;Lion"><img src="/assets/images/header-logo.png" alt="Lion&amp;Lion"></a> -->
           </div>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -207,12 +202,7 @@
         </address>
       </div>
     </footer>
-      
-    <script src="/bower_components/jquery-migrate/jquery-migrate.min.js"></script>
-    <script src="/bower_components/featherlight/release/featherlight.min.js"></script>
-    <script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
-    <script src="/bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
-    <script src="/bower_components/isotope-layout/dist/isotope.pkgd.min.js"></script>
-    <script src="/assets/scripts/script.js"></script>
+
+    <script src="/dist/js/bundle-min.js"></script>
   </body>
 </html>

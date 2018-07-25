@@ -63,6 +63,14 @@ $(document).ready(function(){
     todayHighlight: true
   }).datepicker('update', new Date());
 
+  $('.datepicker').click(function(){
+    var popup =$(this).offset();
+    var popupTop = popup.top - 40;
+    $('.ui-datepicker').css({
+      'top' : popupTop
+    });
+  });
+
   // Ajax form submission
   $('form').submit(function(e){
     event.preventDefault();
