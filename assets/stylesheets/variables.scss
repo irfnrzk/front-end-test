@@ -11,7 +11,7 @@ $dark-blue: #1a0154;
 
 @include font-face(
   "FontAwesome",
-  "../../bower_components/font-awesome/fonts/fontawesome-webfont",
+  "../../dist/fonts/bootstrap/fontawesome-webfont",
   ("woff2", "woff")
 ) {
   font-style: normal;
